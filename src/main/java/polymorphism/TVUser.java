@@ -2,7 +2,8 @@ package polymorphism;
 
 public class TVUser {
 	public static void main(String[] args) {
-		SamsungTV tv = new SamsungTV();
+		BeanFactory bf = new BeanFactory();
+		TV tv = (TV) bf.getBean(args[0]);
 		tv.powerOn();
 		tv.volumeUp();
 		tv.volumeDown();
