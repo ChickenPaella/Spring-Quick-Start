@@ -1,6 +1,15 @@
 package polymorphism;
 
 public class SamsungTV implements TV{
+	
+	public void initMethod() {
+		System.out.println("객체 생성");
+	}
+
+	public void destroyMethod() {
+		System.out.println("객체 소멸");
+	}
+	
 	public void powerOn() {
 		System.out.println("SamsungTV--전원 켠다.");
 	}
