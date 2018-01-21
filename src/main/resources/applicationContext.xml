@@ -3,7 +3,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="tv" class="polymorphism.SamsungTV" init-method="initMethod"
-		destroy-method="destroyMethod" lazy-init="true" />
+	<bean id="tv" class="polymorphism.SamsungTV" lazy-init="true">
+		<property name="speaker" ref="sony"></property>
+		<property name="price" value="2000000"></property>
+	</bean>
 
+	<bean id="sony" class="polymorphism.SonySpeaker"/>
 </beans>
