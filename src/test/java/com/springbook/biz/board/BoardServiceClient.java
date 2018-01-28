@@ -16,8 +16,8 @@ public class BoardServiceClient {
 		vo.setWriter("홍길동");
 		vo.setContent("임시 내용...............");
 		boardService.insertBoard(vo);
-
-		List<BoardVO> boardList = boardService.getBoardList(vo);
+		
+		List<BoardVO> boardList = boardService.getBoardList();
 		for (BoardVO board : boardList) {
 			System.out.println("---> " + board.toString());
 		}
