@@ -42,7 +42,7 @@
 		<aop:advisor pointcut-ref="txPointcut" advice-ref="txAdvice" />
 	</aop:config>
 	
-	<!-- Spring JDBC 설 -->
+	<!-- Spring JDBC 설정 -->
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
